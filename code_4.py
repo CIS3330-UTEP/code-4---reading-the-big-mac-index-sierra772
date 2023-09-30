@@ -4,7 +4,7 @@ big_mac_file = './big-mac-full-index.csv'
 df = pd.read_csv(big_mac_file)
 
 def get_big_mac_price_by_year(year,country_code):
-    query = f"(date >= '{year}-01-01'and date <= '{int(year)+1}-12-31' and iso_a3 == '{country_code.upper()}')"
+    query = f"(date >= '{year}-01-01'and date <= '{int(year)}-12-31' and iso_a3 == '{country_code.upper()}')"
     df_yr = df.query(query)
     mean_price = df_yr['dollar_price'].mean()
     return round(mean_price,2)
@@ -39,7 +39,7 @@ def get_the_most_expensive_big_mac_price_by_year(year):
 
 if __name__ == "__main__":
     
-    mean_price_country = get_big_mac_price_by_year(2010,"jpn")
+    mean_price_country = get_big_mac_price_by_year(2012,"arg")
     print(mean_price_country)
 
     country_price = get_big_mac_price_by_country("usa")
