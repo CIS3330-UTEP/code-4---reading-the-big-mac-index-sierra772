@@ -39,15 +39,15 @@ def get_the_most_expensive_big_mac_price_by_year(year):
 
 if __name__ == "__main__":
     
-    mean_price_country = get_big_mac_price_by_year(2010,"mex")
+    mean_price_country = get_big_mac_price_by_year(2010,"jpn")
     print(mean_price_country)
 
     country_price = get_big_mac_price_by_country("usa")
     print(country_price)
 
-    cheapest_big_mac = get_the_cheapest_big_mac_price_by_year(2009)
+    cheapest_big_mac = get_the_cheapest_big_mac_price_by_year(2012)
     print(cheapest_big_mac)
 
-    expensive_big_mac = get_the_most_expensive_big_mac_price_by_year(2017)
+    expensive_big_mac = get_the_most_expensive_big_mac_price_by_year(2005)
     print(expensive_big_mac)
 
